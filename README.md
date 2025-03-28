@@ -134,3 +134,42 @@ This documentation allows you to:
 - View request/response schemas
 - Test API calls directly from the browser
 - Understand all available parameters and their types
+
+## Test Data Scripts
+
+The project includes scripts to help you populate your database with test metrics data. These scripts are useful for development, testing, and demonstration purposes.
+
+### Prerequisites
+
+- Make sure your API server is running locally on port 3000
+- Node.js and npm installed
+
+### Available Scripts
+
+#### Distance Metrics
+
+The `insert-distance-metrics.js` script will insert 60 distance metric records into the database with progressively increasing values.
+
+```bash
+# Navigate to the test/scripts directory
+cd test/scripts
+
+# Run the script
+node insert-distance-metrics.js
+```
+
+This will create 60 distance records starting from 170.5 cm, with each record 0.5 cm larger than the previous one. Records are spaced 12 hours apart starting from the date specified in the script.
+
+#### Temperature Metrics
+
+The `insert-temperature-metrics.js` script will insert temperature metric records into the database.
+
+```bash
+# Navigate to the test/scripts directory
+cd test/scripts
+
+# Run the script
+node insert-temperature-metrics.js
+```
+
+This will populate your database with temperature records according to the pattern defined in the script.
